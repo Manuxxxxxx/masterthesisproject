@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Ts-9c-iL5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Farbe-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TiereUndMusik" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="MLk-Yb-lan" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gif-Gm-xnb" userLabel="House">
+                                <rect key="frame" x="37.5" y="70" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="snu-z9-Uxh"/>
+                                    <constraint firstAttribute="width" constant="300" id="sv0-9P-Neh"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZiO-4s-sgj" userLabel="Card3">
+                                <rect key="frame" x="265" y="473" width="100" height="130"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="oyI-NS-vki"/>
+                                    <constraint firstAttribute="width" constant="100" id="sY2-Bc-C9N"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="mW8-z2-4NN" appends="YES" id="saL-dZ-wt5"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fiX-pS-gST" userLabel="Card2">
+                                <rect key="frame" x="137.5" y="473" width="100" height="130"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="O7c-He-LpO"/>
+                                    <constraint firstAttribute="width" constant="100" id="zzI-ld-szU"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="m7a-HW-LCT" appends="YES" id="dym-hU-6wj"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" tag="1" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cp2-up-f81" userLabel="Card1">
+                                <rect key="frame" x="10" y="473" width="100" height="130"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" allowsDirectInteraction="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="WOP-aG-6mP"/>
+                                    <constraint firstAttribute="height" constant="130" id="kkf-jf-5EJ"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="K2P-Ya-XvM" appends="YES" id="adD-tU-0MA"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwf-qX-mi2">
+                                <rect key="frame" x="296.5" y="371" width="37" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" red="0.5" green="0.40195126597223801" blue="0.19501387949069177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zeit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7F-iS-Qgw" userLabel="Countdown">
+                                <rect key="frame" x="172.5" y="396" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.5" green="0.40195126599999997" blue="0.19501387949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgC-GV-1co" userLabel="PlayButton">
+                                <rect key="frame" x="38" y="385" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="dmN-1P-O0r"/>
+                                    <constraint firstAttribute="width" constant="44" id="uhT-6U-XeU"/>
+                                </constraints>
+                                <state key="normal" image="Play Button Icon Kopie"/>
+                                <connections>
+                                    <action selector="PlayTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nfw-yG-2Tv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gif-Gm-xnb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0gr-tO-cIe">
+                                <variation key="heightClass=compact" constant="-70"/>
+                            </constraint>
+                            <constraint firstItem="Kwf-qX-mi2" firstAttribute="centerY" secondItem="c7F-iS-Qgw" secondAttribute="centerY" id="2rJ-pD-iSG"/>
+                            <constraint firstItem="gif-Gm-xnb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5WK-lv-s5a"/>
+                            <constraint firstItem="gif-Gm-xnb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="70" id="7gy-Xl-BRv">
+                                <variation key="heightClass=compact" constant="10"/>
+                                <variation key="widthClass=regular" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="Kwf-qX-mi2" firstAttribute="centerY" secondItem="qgC-GV-1co" secondAttribute="centerY" id="9wl-LW-YuT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cp2-up-f81" secondAttribute="bottom" constant="20" id="AuL-pk-skd"/>
+                            <constraint firstItem="ZiO-4s-sgj" firstAttribute="centerX" secondItem="Kwf-qX-mi2" secondAttribute="centerX" id="FSP-gW-me3"/>
+                            <constraint firstItem="ZiO-4s-sgj" firstAttribute="top" secondItem="Kwf-qX-mi2" secondAttribute="bottom" constant="30" id="MNE-h5-J8m"/>
+                            <constraint firstAttribute="trailing" secondItem="ZiO-4s-sgj" secondAttribute="trailing" constant="10" id="StD-d1-TCR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fiX-pS-gST" secondAttribute="bottom" constant="20" id="TXC-Mg-SGo"/>
+                            <constraint firstItem="fiX-pS-gST" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aFw-AM-1fG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZiO-4s-sgj" secondAttribute="bottom" constant="20" id="bHM-ig-fA5"/>
+                            <constraint firstItem="cp2-up-f81" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="dLC-VE-Yw4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MLk-Yb-lan" secondAttribute="bottom" id="eUe-zF-udU"/>
+                            <constraint firstAttribute="trailing" secondItem="MLk-Yb-lan" secondAttribute="trailing" id="hom-YK-8qi"/>
+                            <constraint firstItem="MLk-Yb-lan" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iv6-uJ-QJS"/>
+                            <constraint firstItem="fiX-pS-gST" firstAttribute="centerX" secondItem="c7F-iS-Qgw" secondAttribute="centerX" id="oC7-Mr-UGS"/>
+                            <constraint firstItem="gif-Gm-xnb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="59" id="saR-JC-yfy">
+                                <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="cp2-up-f81" firstAttribute="centerX" secondItem="qgC-GV-1co" secondAttribute="centerX" id="uRO-Qz-SPn"/>
+                            <constraint firstItem="MLk-Yb-lan" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zkk-Hx-Huz"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0gr-tO-cIe"/>
+                                <exclude reference="saR-JC-yfy"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="0gr-tO-cIe"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="saR-JC-yfy"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Farbe" id="kxy-JD-qoA">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="KBU-5G-CJJ"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="BackgroundImageView" destination="MLk-Yb-lan" id="I1t-Hb-NN3"/>
+                        <outlet property="Card1ImageView" destination="cp2-up-f81" id="k8t-MS-lY1"/>
+                        <outlet property="Card2ImageView" destination="fiX-pS-gST" id="E13-tJ-xfA"/>
+                        <outlet property="Card3ImageView" destination="ZiO-4s-sgj" id="yBC-Fm-Wtm"/>
+                        <outlet property="CountdownFarbeLabel" destination="c7F-iS-Qgw" id="kre-uA-97a"/>
+                        <outlet property="FarbeScoreLabel" destination="Kwf-qX-mi2" id="NMh-Vo-AXi"/>
+                        <outlet property="HouseImageView" destination="gif-Gm-xnb" id="hng-mu-blI"/>
+                        <outlet property="PlayButton" destination="qgC-GV-1co" id="V29-fr-VUM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="K2P-Ya-XvM" userLabel="Card1 Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="FarbeCard1SwipeGesture:" destination="BYZ-38-t0r" id="cDC-VS-niY"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="m7a-HW-LCT" userLabel="Card 2 Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="FarbeCard2SwipeGesture:" destination="BYZ-38-t0r" id="EhL-XE-CWJ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="mW8-z2-4NN" userLabel="Card 3 Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="FarbeCard3SwipeGesture:" destination="BYZ-38-t0r" id="xiH-2N-SZk"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="931" y="-331"/>
+        </scene>
+        <!--Menue-->
+        <scene sceneID="JJW-29-TbR">
+            <objects>
+                <viewController id="sTT-KV-g2L" userLabel="Menue" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hlh-5f-Edg"/>
+                        <viewControllerLayoutGuide type="bottom" id="4To-YR-4F9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Sr-Om-374">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="kkG-CT-4Vw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvh-4N-rd9" userLabel="Button Farbe">
+                                <rect key="frame" x="62.5" y="103.5" width="250" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="3lr-xd-SLl"/>
+                                    <constraint firstAttribute="width" constant="250" id="iFJ-FM-KAt"/>
+                                </constraints>
+                                <state key="normal" image="Menü Farbe"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Yo3-Vd-imw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCr-7L-6kd" userLabel="Button Größe">
+                                <rect key="frame" x="62.5" y="423.5" width="250" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="fYP-GL-SLf"/>
+                                    <constraint firstAttribute="width" constant="250" id="gqc-rp-bZq"/>
+                                </constraints>
+                                <state key="normal" image="Menü Groß vs Klein"/>
+                                <connections>
+                                    <segue destination="y30-Cr-Nth" kind="show" id="Zvd-s9-0IB"/>
+                                </connections>
+                            </button>
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ltx-rT-E90" userLabel="Button Tierart">
+                                <rect key="frame" x="62.5" y="263.5" width="250" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="7bC-v6-1T0"/>
+                                    <constraint firstAttribute="width" constant="250" id="Kvc-hx-fxo"/>
+                                </constraints>
+                                <state key="normal" image="Menü Hund vs Katze"/>
+                                <connections>
+                                    <segue destination="jX2-Kh-rlf" kind="show" id="eTk-GG-6h0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ltx-rT-E90" firstAttribute="top" secondItem="Hvh-4N-rd9" secondAttribute="bottom" constant="20" id="Cke-Pf-14G"/>
+                            <constraint firstItem="4To-YR-4F9" firstAttribute="top" secondItem="kkG-CT-4Vw" secondAttribute="bottom" id="JyA-96-bBT"/>
+                            <constraint firstItem="Ltx-rT-E90" firstAttribute="centerX" secondItem="9Sr-Om-374" secondAttribute="centerX" id="MdX-Nj-TZj"/>
+                            <constraint firstItem="Hvh-4N-rd9" firstAttribute="centerX" secondItem="9Sr-Om-374" secondAttribute="centerX" id="QuH-vo-Yf6"/>
+                            <constraint firstItem="Ltx-rT-E90" firstAttribute="centerY" secondItem="9Sr-Om-374" secondAttribute="centerY" id="Sj0-MU-n2R"/>
+                            <constraint firstAttribute="trailing" secondItem="kkG-CT-4Vw" secondAttribute="trailing" id="WrQ-UQ-tfm"/>
+                            <constraint firstItem="kkG-CT-4Vw" firstAttribute="top" secondItem="9Sr-Om-374" secondAttribute="top" id="mDt-cy-Qph"/>
+                            <constraint firstItem="QCr-7L-6kd" firstAttribute="top" secondItem="Ltx-rT-E90" secondAttribute="bottom" constant="20" id="sJJ-kw-CxR"/>
+                            <constraint firstItem="QCr-7L-6kd" firstAttribute="centerX" secondItem="9Sr-Om-374" secondAttribute="centerX" id="sUR-v5-ykY"/>
+                            <constraint firstItem="kkG-CT-4Vw" firstAttribute="leading" secondItem="9Sr-Om-374" secondAttribute="leading" id="zWt-UB-cpg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="pTh-wK-Dpx"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvV-1s-xHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-249" y="517"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zAk-WA-oH0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Ts-9c-iL5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uID-lb-XhC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sTT-KV-g2L" kind="relationship" relationship="rootViewController" id="YcO-T8-OfM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yXa-nv-Nx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1031" y="517"/>
+        </scene>
+        <!--Tierart-->
+        <scene sceneID="Acr-2v-Fgh">
+            <objects>
+                <viewController id="jX2-Kh-rlf" customClass="ViewController" customModule="TiereUndMusik" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t2s-aj-raY"/>
+                        <viewControllerLayoutGuide type="bottom" id="0o1-ak-iyY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NLs-My-d9M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ZBv-kH-PNG" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1m7-n7-W5c" userLabel="House">
+                                <rect key="frame" x="37.5" y="70" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="cwR-BM-gtO"/>
+                                    <constraint firstAttribute="height" constant="200" id="vjZ-n0-rBz"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fN6-sa-3aB" userLabel="Card3">
+                                <rect key="frame" x="265" y="473" width="100" height="130"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Bg7-CI-Rdp"/>
+                                    <constraint firstAttribute="height" constant="130" id="vsF-BT-gKV"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="K1Q-bm-3Hb" appends="YES" id="JRd-G7-cOB"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hWv-V9-XOa" userLabel="Card2">
+                                <rect key="frame" x="137.5" y="473" width="100" height="130"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="UzR-9E-Zk3"/>
+                                    <constraint firstAttribute="width" constant="100" id="cB2-JS-d6C"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="VbH-zW-otz" appends="YES" id="iet-ou-lj6"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" tag="1" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sA1-d3-1x6" userLabel="Card1">
+                                <rect key="frame" x="10" y="473" width="100" height="130"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="88a-cc-Ley"/>
+                                    <constraint firstAttribute="height" constant="130" id="tI6-xC-bbx"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="RHu-TB-CRa" appends="YES" id="CJe-Xw-pRb"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zeit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIP-BH-4wj" userLabel="ZeitTierart">
+                                <rect key="frame" x="172.5" y="397" width="30" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.5" green="0.40195126599999997" blue="0.19501387949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxT-o6-dSV" userLabel="ScoreLabelTierart">
+                                <rect key="frame" x="296.5" y="371" width="37" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" red="0.5" green="0.40195126599999997" blue="0.19501387949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lET-WL-YNc" userLabel="PlayButtonTierart">
+                                <rect key="frame" x="38" y="384.5" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="k0e-UB-fAI"/>
+                                    <constraint firstAttribute="width" constant="44" id="rao-yw-cFF"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Play Button Icon Kopie"/>
+                                <connections>
+                                    <action selector="PlayButtonTierartTapped:" destination="jX2-Kh-rlf" eventType="touchUpInside" id="bda-VB-nJJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1m7-n7-W5c" firstAttribute="top" secondItem="t2s-aj-raY" secondAttribute="bottom" constant="59" id="14q-Bv-8cU">
+                                <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="1m7-n7-W5c" firstAttribute="top" secondItem="t2s-aj-raY" secondAttribute="bottom" id="2Ci-Sz-vub">
+                                <variation key="heightClass=compact" constant="-70"/>
+                            </constraint>
+                            <constraint firstItem="hWv-V9-XOa" firstAttribute="centerX" secondItem="NLs-My-d9M" secondAttribute="centerX" id="5Jv-NC-ONE"/>
+                            <constraint firstItem="fN6-sa-3aB" firstAttribute="top" secondItem="cxT-o6-dSV" secondAttribute="bottom" constant="30" id="7tD-6Q-fOc"/>
+                            <constraint firstItem="hWv-V9-XOa" firstAttribute="centerX" secondItem="jIP-BH-4wj" secondAttribute="centerX" id="8lS-t3-18L"/>
+                            <constraint firstItem="fN6-sa-3aB" firstAttribute="centerX" secondItem="cxT-o6-dSV" secondAttribute="centerX" id="D40-0g-jK5"/>
+                            <constraint firstItem="sA1-d3-1x6" firstAttribute="centerX" secondItem="lET-WL-YNc" secondAttribute="centerX" id="NMH-Fl-lE8"/>
+                            <constraint firstAttribute="trailing" secondItem="fN6-sa-3aB" secondAttribute="trailing" constant="10" id="Onp-9k-TrY"/>
+                            <constraint firstItem="0o1-ak-iyY" firstAttribute="top" secondItem="ZBv-kH-PNG" secondAttribute="bottom" id="S5o-sb-ATz"/>
+                            <constraint firstItem="0o1-ak-iyY" firstAttribute="top" secondItem="fN6-sa-3aB" secondAttribute="bottom" constant="20" id="ThJ-x6-EfQ"/>
+                            <constraint firstItem="1m7-n7-W5c" firstAttribute="centerX" secondItem="NLs-My-d9M" secondAttribute="centerX" id="Uln-ll-Opt"/>
+                            <constraint firstItem="cxT-o6-dSV" firstAttribute="centerY" secondItem="jIP-BH-4wj" secondAttribute="centerY" id="VO3-oc-agQ"/>
+                            <constraint firstItem="0o1-ak-iyY" firstAttribute="top" secondItem="sA1-d3-1x6" secondAttribute="bottom" constant="20" id="WgL-7v-lYa"/>
+                            <constraint firstAttribute="trailing" secondItem="ZBv-kH-PNG" secondAttribute="trailing" id="bHz-io-DWP"/>
+                            <constraint firstItem="sA1-d3-1x6" firstAttribute="leading" secondItem="NLs-My-d9M" secondAttribute="leading" constant="10" id="f8W-qY-Xi0"/>
+                            <constraint firstItem="ZBv-kH-PNG" firstAttribute="top" secondItem="NLs-My-d9M" secondAttribute="top" id="ir5-pX-qwn"/>
+                            <constraint firstItem="ZBv-kH-PNG" firstAttribute="leading" secondItem="NLs-My-d9M" secondAttribute="leading" id="lKm-nw-4ZL"/>
+                            <constraint firstItem="1m7-n7-W5c" firstAttribute="top" secondItem="NLs-My-d9M" secondAttribute="top" constant="70" id="q4h-cn-w1U">
+                                <variation key="heightClass=compact" constant="10"/>
+                                <variation key="widthClass=regular" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="0o1-ak-iyY" firstAttribute="top" secondItem="hWv-V9-XOa" secondAttribute="bottom" constant="20" id="vrD-XR-2w2"/>
+                            <constraint firstItem="cxT-o6-dSV" firstAttribute="centerY" secondItem="lET-WL-YNc" secondAttribute="centerY" id="ydb-lo-e1b"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="14q-Bv-8cU"/>
+                                <exclude reference="2Ci-Sz-vub"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="2Ci-Sz-vub"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="14q-Bv-8cU"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Tierart" id="7Tt-qe-by9" userLabel="zurückbutton">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="AMo-nE-zQt"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="BackgroundImageView" destination="ZBv-kH-PNG" id="IOX-jt-5km"/>
+                        <outlet property="Card1ImageView" destination="sA1-d3-1x6" id="z0M-hQ-fw8"/>
+                        <outlet property="Card2ImageView" destination="hWv-V9-XOa" id="y9O-Sy-T0j"/>
+                        <outlet property="Card3ImageView" destination="fN6-sa-3aB" id="U9b-Ra-CWl"/>
+                        <outlet property="CountdownTierartLabel" destination="jIP-BH-4wj" id="CIB-t4-QJ7"/>
+                        <outlet property="HouseImageView" destination="1m7-n7-W5c" id="GvR-e4-RSd"/>
+                        <outlet property="PlayButtonTierart" destination="lET-WL-YNc" id="bPx-BE-mNQ"/>
+                        <outlet property="TierartScoreLabel" destination="cxT-o6-dSV" id="rj8-6K-2T1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rqF-r1-xeJ" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="RHu-TB-CRa" userLabel="SwipeTierartCard1">
+                    <connections>
+                        <action selector="SwipeTierartCard1:" destination="jX2-Kh-rlf" id="0X8-du-Vqk"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="VbH-zW-otz" userLabel="SwipeTierartCard2">
+                    <connections>
+                        <action selector="SwipeTierartCard2:" destination="jX2-Kh-rlf" id="Amc-cF-SYy"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="K1Q-bm-3Hb" userLabel="SwipeTierartCard3">
+                    <connections>
+                        <action selector="SwipeTierartCard3:" destination="jX2-Kh-rlf" id="Kyj-Q7-2Oa"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="939" y="581"/>
+        </scene>
+        <!--Größe-->
+        <scene sceneID="6cq-hD-Tnx">
+            <objects>
+                <viewController id="y30-Cr-Nth" customClass="ViewController" customModule="TiereUndMusik" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oAE-6L-kAT"/>
+                        <viewControllerLayoutGuide type="bottom" id="PTe-yt-Upi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pft-Eu-vOk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="wA4-4E-oWN" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ymk-mF-cFs" userLabel="House">
+                                <rect key="frame" x="37.5" y="70" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="b4w-PG-fUO"/>
+                                    <constraint firstAttribute="height" constant="200" id="kt1-id-20Z"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tNX-vn-LVU" userLabel="Card3">
+                                <rect key="frame" x="265" y="473" width="100" height="130"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="QaU-lm-jlq"/>
+                                    <constraint firstAttribute="width" constant="100" id="dW4-Qz-Yqi"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Cb3-7w-Ia0" appends="YES" id="U9U-uG-tj0"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cH3-Yf-eJN" userLabel="Card2">
+                                <rect key="frame" x="137.5" y="473" width="100" height="130"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="KWx-IV-sBO"/>
+                                    <constraint firstAttribute="height" constant="130" id="ns8-6B-yTZ"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vpA-kH-Dnu" appends="YES" id="P3y-5D-b37"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" tag="1" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Np-BW-DCk" userLabel="Card1">
+                                <rect key="frame" x="10" y="473" width="100" height="130"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="YzT-au-Snt"/>
+                                    <constraint firstAttribute="width" constant="100" id="cGi-6l-qyt"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vkA-as-ghZ" appends="YES" id="c4C-Je-yZa"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zeit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWK-o6-Bah" userLabel="ZeitGröße">
+                                <rect key="frame" x="172.5" y="397" width="30" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.5" green="0.40195126599999997" blue="0.19501387949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjl-zs-q8s" userLabel="ScoreLabelGröße">
+                                <rect key="frame" x="296.5" y="371" width="37" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" red="0.5" green="0.40195126599999997" blue="0.19501387949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8F-yy-Xdf" userLabel="PlayButtonGröße">
+                                <rect key="frame" x="38" y="385" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7Jh-yF-szf"/>
+                                    <constraint firstAttribute="width" constant="44" id="G3v-Qa-GeD"/>
+                                </constraints>
+                                <state key="normal" image="Play Button Icon Kopie"/>
+                                <connections>
+                                    <action selector="PlayButtonSizeTapped:" destination="y30-Cr-Nth" eventType="touchUpInside" id="m70-6k-gXa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wA4-4E-oWN" secondAttribute="trailing" id="00i-OP-q0g"/>
+                            <constraint firstItem="wA4-4E-oWN" firstAttribute="top" secondItem="pft-Eu-vOk" secondAttribute="top" id="02P-VY-BEx"/>
+                            <constraint firstItem="vjl-zs-q8s" firstAttribute="centerY" secondItem="i8F-yy-Xdf" secondAttribute="centerY" id="05h-rl-0ec"/>
+                            <constraint firstItem="PTe-yt-Upi" firstAttribute="top" secondItem="cH3-Yf-eJN" secondAttribute="bottom" constant="20" id="1qf-0L-gTq"/>
+                            <constraint firstItem="vjl-zs-q8s" firstAttribute="centerY" secondItem="aWK-o6-Bah" secondAttribute="centerY" id="9FI-3E-14L"/>
+                            <constraint firstItem="9Np-BW-DCk" firstAttribute="leading" secondItem="pft-Eu-vOk" secondAttribute="leading" constant="10" id="9YT-3B-MBa"/>
+                            <constraint firstItem="PTe-yt-Upi" firstAttribute="top" secondItem="tNX-vn-LVU" secondAttribute="bottom" constant="20" id="IgV-JX-fSa"/>
+                            <constraint firstItem="ymk-mF-cFs" firstAttribute="top" secondItem="oAE-6L-kAT" secondAttribute="bottom" id="OaJ-WM-0cK">
+                                <variation key="heightClass=compact" constant="-70"/>
+                            </constraint>
+                            <constraint firstItem="PTe-yt-Upi" firstAttribute="top" secondItem="9Np-BW-DCk" secondAttribute="bottom" constant="20" id="Ofc-96-pK2"/>
+                            <constraint firstItem="wA4-4E-oWN" firstAttribute="leading" secondItem="pft-Eu-vOk" secondAttribute="leading" id="PC1-Lt-hja"/>
+                            <constraint firstItem="ymk-mF-cFs" firstAttribute="top" secondItem="pft-Eu-vOk" secondAttribute="top" constant="70" id="PiS-WC-qaM">
+                                <variation key="heightClass=compact" constant="10"/>
+                                <variation key="widthClass=regular" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="PTe-yt-Upi" firstAttribute="top" secondItem="wA4-4E-oWN" secondAttribute="bottom" id="VWM-H5-rBF"/>
+                            <constraint firstItem="tNX-vn-LVU" firstAttribute="top" secondItem="vjl-zs-q8s" secondAttribute="bottom" constant="30" id="ZAM-Fa-8BZ"/>
+                            <constraint firstAttribute="trailing" secondItem="tNX-vn-LVU" secondAttribute="trailing" constant="10" id="aFI-FK-jhC"/>
+                            <constraint firstItem="9Np-BW-DCk" firstAttribute="centerX" secondItem="i8F-yy-Xdf" secondAttribute="centerX" id="br4-p5-oz4"/>
+                            <constraint firstItem="cH3-Yf-eJN" firstAttribute="centerX" secondItem="aWK-o6-Bah" secondAttribute="centerX" id="kJQ-i4-pju"/>
+                            <constraint firstItem="ymk-mF-cFs" firstAttribute="centerX" secondItem="pft-Eu-vOk" secondAttribute="centerX" id="kUr-HT-XDH"/>
+                            <constraint firstItem="tNX-vn-LVU" firstAttribute="centerX" secondItem="vjl-zs-q8s" secondAttribute="centerX" id="m6A-Mk-Wfr"/>
+                            <constraint firstItem="cH3-Yf-eJN" firstAttribute="centerX" secondItem="pft-Eu-vOk" secondAttribute="centerX" id="oo2-NO-sWd"/>
+                            <constraint firstItem="ymk-mF-cFs" firstAttribute="top" secondItem="oAE-6L-kAT" secondAttribute="bottom" constant="59" id="rlv-Wn-Zva">
+                                <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="OaJ-WM-0cK"/>
+                                <exclude reference="rlv-Wn-Zva"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="OaJ-WM-0cK"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="rlv-Wn-Zva"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Größe" id="NHA-2N-gzZ">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="ORg-YM-Aac"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="BackgroundImageView" destination="wA4-4E-oWN" id="dhv-1J-ag8"/>
+                        <outlet property="Card1ImageView" destination="9Np-BW-DCk" id="23v-DW-vp9"/>
+                        <outlet property="Card2ImageView" destination="cH3-Yf-eJN" id="CAG-ch-5qr"/>
+                        <outlet property="Card3ImageView" destination="tNX-vn-LVU" id="RV8-Hq-xRP"/>
+                        <outlet property="CountdownSizeLabel" destination="aWK-o6-Bah" id="W1D-E4-UWn"/>
+                        <outlet property="HouseImageView" destination="ymk-mF-cFs" id="eaa-af-K4I"/>
+                        <outlet property="PlayButtonGröße" destination="i8F-yy-Xdf" id="l3i-5S-0xL"/>
+                        <outlet property="SizeScoreLabel" destination="vjl-zs-q8s" id="4Sc-w8-6Qe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tdn-6v-JXx" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="vkA-as-ghZ" userLabel="SwipeSizeCard1">
+                    <connections>
+                        <action selector="SwipeSizeCard1:" destination="y30-Cr-Nth" id="OMa-Pb-xEm"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="vpA-kH-Dnu" userLabel="SwipeSizeCard2">
+                    <connections>
+                        <action selector="SwipeSizeCard2:" destination="y30-Cr-Nth" id="hqC-VO-EhW"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="Cb3-7w-Ia0" userLabel="SwipeSizeCard3">
+                    <connections>
+                        <action selector="SwipeSizeCard3:" destination="y30-Cr-Nth" id="Mox-1e-CI2"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="939" y="1541"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1242" height="2208"/>
+        <image name="Menü Farbe" width="736" height="414"/>
+        <image name="Menü Groß vs Klein" width="736" height="414"/>
+        <image name="Menü Hund vs Katze" width="736" height="414"/>
+        <image name="Play Button Icon Kopie" width="500" height="500"/>
+    </resources>
+</document>
